@@ -13,5 +13,14 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudeitsrowsheen/burger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dudeitsrowsheen/burger/issues"
+  },
+  "homepage": "https://github.com/dudeitsrowsheen/burger#readme"
 }
