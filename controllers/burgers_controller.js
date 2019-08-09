@@ -1,16 +1,24 @@
 var express = require("express");
-var router = express.Router();
 var burger = require("../models/burger.js");
+var router = express.Router();
+var connection = require("../config/connection.js");
+
+
 
 router.get("/", function (req, res) {
-    burger.selectAll(function (data) {
-        var hbsObject = {
-            burgers: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
-    });
+    // burger.selectAll(function (data) {
+    //     var hbsObject = {
+    //         burgers: data
+    //     };
+    //     console.log(hbsObject);
+    //     res.render("index", hbsObject);
+    // });
+    connection.query("SELECT * FROM burgers",function(err, result){
+        res.render("index",{items:result});
+    })
+
 });
+
 
 
 router.post("/api/burgers", function (req, res) {
